@@ -1,0 +1,37 @@
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+         
+         <!-- bootstrap -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         
+      </head>
+      <body style="text-align : center; background-color : rgb(56, 51, 123); color: white">
+         
+         <div class="body-container">
+            
+            <div style="border : 8px solid rgb(176, 155, 196); height: 50px">
+               Django Chat Application
+            </div>
+            <br>
+            <div style="height: 200px; text-align: left;">
+               <form method="POST" action="checkroom/">
+                  {% csrf_token %}
+                  <label class="form-label" for="roomname">Room Name</label>
+                  <input class="form-control" type="text" id="room-name-id" name="room-name-input">
+                  <br>
+                  <label class="form-label" for="username">User Name</label>
+                  <input class="form-control" type="text" id="user-name-id" name="user-name-input">
+                  <br>
+                  <button class="btn btn-outline-warning" type="submit">Submit</button>
+               </form>
+            </div>
+
+         </div>
+         
+      </body>
+      </html>
